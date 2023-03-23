@@ -3,12 +3,16 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuBurguer = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.container');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
+const productDetailCloseIcon = document.querySelector(".product-detail-close")
 const aside = document.querySelector(".product-detail");
+const producDetailContainer = document.querySelector(".second-product-detail")
 const cardsContainer = document.querySelector(".cards-container");
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
 menuBurguer.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click", toggleCarritoAside);
+productDetailCloseIcon.addEventListener("click", closeProductDetailAside);
+
 
 function toggleDesktopMenu() {
     const isAsideClosed = aside.classList.contains("inactive");
@@ -38,6 +42,14 @@ function toggleCarritoAside() {
     }
     /* menuDesktop: not yet */
     aside.classList.toggle("inactive");
+}
+
+function openProducDetailAside() {
+    producDetailContainer.classList.remove("inactive");
+}
+
+function closeProductDetailAside() {
+    producDetailContainer.classList.add("inactive");
 }
 
 const productList = [];
@@ -87,6 +99,7 @@ function renderProducts(arr) {
     
         const productImg = document.createElement("img");
         productImg.setAttribute("src", product.image);
+        productImg.addEventListener("click", openProducDetailAside);
         
         //recordar que product = {name, price, image} -> product.image
     
