@@ -42,7 +42,7 @@ function toggleCarritoAside() {
 
 const productList = [];
 productList.push({
-    name: "Bike",
+    name: "Bicicleta",
     price: 120,
     image: "https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 });
@@ -55,6 +55,11 @@ productList.push({
     name: "Celular",
     price: 200,
     image: "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+});
+productList.push({
+    name: "Cámara",
+    price: 150,
+    image: "https://images.pexels.com/photos/5487134/pexels-photo-5487134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 });
 
 
