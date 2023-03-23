@@ -72,6 +72,10 @@ nav {
     border: 1px solid var(--hospital-green);
     color: var(--hospital-green);
 }
+.navbar-left .home-mobile:hover, .navbar-left .home-mobile {
+    display: flex;
+    border: none;
+}
 
 .navbar-email {
     color: var(--very-light-pink);
